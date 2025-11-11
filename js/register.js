@@ -35,10 +35,7 @@ registerBtn.addEventListener("click", async () => {
 
     const data = await res.json();
 
-    if (res.ok) {
-      messageDiv.textContent = data.message;
-      registerBtn.style.display = "none";
-      loginBtn.style.display = "block"; // mostra o botão de login
+    if(res.ok) {
       Toastify({
         text: "Administrador registrado com sucesso!",
         duration: 3000, // 3 segundos
@@ -47,6 +44,13 @@ registerBtn.addEventListener("click", async () => {
         position: "right", // posição horizontal: left, center, right
         backgroundColor: "linear-gradient(to right, #00b09b)", // cor personalizada
       }).showToast();
+      console.log("teste bandido")
+    }
+
+    if (res.ok) {
+      messageDiv.textContent = data.message;
+      registerBtn.style.display = "none";
+      loginBtn.style.display = "block"; // mostra o botão de login
     } else {
       errorDiv.textContent = data.error || "Erro ao registrar.";
     }
