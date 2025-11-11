@@ -35,17 +35,6 @@ registerBtn.addEventListener("click", async () => {
 
     const data = await res.json();
 
-    if(res.ok) {
-      Toastify({
-        text: "Administrador registrado com sucesso!",
-        duration: 3000, // 3 segundos
-        close: true, // botão de fechar
-        gravity: "top", // posição vertical: top ou bottom
-        position: "right", // posição horizontal: left, center, right
-        backgroundColor: "linear-gradient(to right, #00b09b)", // cor personalizada
-      }).showToast();
-      console.log("teste bandido")
-    }
 
     if (res.ok) {
       messageDiv.textContent = data.message;
