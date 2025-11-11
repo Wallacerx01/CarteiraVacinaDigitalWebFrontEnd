@@ -49,5 +49,5 @@ registerBtn.addEventListener("click", async () => {
 });
 
 loginBtn.addEventListener("click", () => {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 });

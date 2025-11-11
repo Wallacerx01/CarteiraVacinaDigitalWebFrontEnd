@@ -8,7 +8,7 @@ const cartaoVacina =
 
 // redirect se não autenticado
 if (!token) {
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 // elementos do DOM principais (devem existir no HTML)
