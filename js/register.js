@@ -39,6 +39,14 @@ registerBtn.addEventListener("click", async () => {
       messageDiv.textContent = data.message;
       registerBtn.style.display = "none";
       loginBtn.style.display = "block"; // mostra o botão de login
+      Toastify({
+        text: "Administrador registrado com sucesso!",
+        duration: 3000, // 3 segundos
+        close: true, // botão de fechar
+        gravity: "top", // posição vertical: top ou bottom
+        position: "right", // posição horizontal: left, center, right
+        backgroundColor: "linear-gradient(to right, #00b09b)", // cor personalizada
+      }).showToast();
     } else {
       errorDiv.textContent = data.error || "Erro ao registrar.";
     }
